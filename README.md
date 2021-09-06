@@ -7,7 +7,7 @@
 
 
 ## Installation
-    pip install --upgrade tapi-yandex-market==1.0.1
+    pip install --upgrade tapi-yandex-market==1.0.2
 
 
 ## [API docs](https://yandex.ru/dev/market/partner/doc/dg/concepts/about.html)
@@ -304,6 +304,10 @@ client.campaigns().open_in_browser()
 
 
 ## CHANGELOG
+### v1.0.2
+2021-09-06
+- fix iter_flatten_stats_row
+
 ### v1.0.1
 2021-09-06
 - fix bugs
