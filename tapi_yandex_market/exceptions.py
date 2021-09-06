@@ -81,12 +81,6 @@ class ForbiddenError(ClientError):
     ...
 
 
-class NotEnoughUnitsError(ClientError):
-    """Documentation https://yandex.ru/dev/market/partner/doc/dg/concepts/error-codes.html"""
-
-    ...
-
-
 class UnsupportedMediaTypeError(ClientError):
     """Documentation https://yandex.ru/dev/market/partner/doc/dg/concepts/error-codes.html"""
 
