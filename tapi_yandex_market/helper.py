@@ -1,11 +1,11 @@
-from typing import List, Union, Any, Dict
+from typing import List, Union, Any, Dict, Iterator
 
 NewNameT = str
 
 
 def iter_flatten_stats_row(
     rows: List[Dict[str, Union[dict, Any]]], **new_field_names: NewNameT
-) -> List[Dict[str, Any]]:
+) -> Iterator[Dict[str, Any]]:
     """
     Example transform:
 
