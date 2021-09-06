@@ -167,14 +167,12 @@ class YandexMarketClientAdapter(JSONAdapterMixin, TapiAdapter):
 
         return False
 
-    def get_iterator_pages(
-        self, response_data, response, request_kwargs, api_params, **kwargs
-    ):
+    def get_iterator_pages(self, response_data, **kwargs):
         if "offersStats" in response_data:
-            return response_data["offersStats"].get("offerStats", [])
+            return [response_data]
 
     def get_iterator_next_request_kwargs(
-        self, response_data, response, request_kwargs, api_params, **kwargs
+        self, response_data, response, request_kwargs, **kwargs
     ) -> Optional[dict]:
         if "offersStats" in response_data:
             total = response_data["offersStats"]["totalOffersCount"]
